@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/Teampir/d-n-1-f",
-    "repository": "https://github.com/Teampir/d-n-1-f",
+    "website": "https://github.com/Sajeevbkk/AutoSearch",
+    "repository": "https://github.com/Sajeevbkk/AutoSearch",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",

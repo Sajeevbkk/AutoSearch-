@@ -108,8 +108,3 @@ async def list_chats(bot, message):
 async def get_clone(bot, message):
     await message.reply_text("Hi, Guys I'am a Developer, If You Need A Bot Like This => See @AdvBotUpdates We Will Also Develope Bot Like Mallu_Movies/ProSearch bot and We Will Also Develope Bot As Your Wish😇")
 
-
-@Client.on_message(filters.command('Hello') & filters.incoming)
-async def get_clone(bot, message):
-    await message.reply_text("Hi, Guys I'am a Movie Giver, If You Need Movies => Click Bellow Button. Search Movies As Your Wish😇")
-reply_markup=InlineKeyboardMarkup(

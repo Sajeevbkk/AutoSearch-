@@ -113,9 +113,3 @@ async def get_clone(bot, message):
 async def get_clone(bot, message):
     await message.reply_text("Hi, Guys I'am a Movie Giver, If You Need Movies => Click Bellow Button. Search Movies As Your Wish😇")
 reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        text="🔍SEARCH HERE🔎", url=f"http://t.me/FilmPiratesGroup"
-                    )
-                ]

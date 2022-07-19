@@ -1,11 +1,8 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-Hey {} 
+    START_TXT = """<b>𝙷𝙴𝙻𝙾 {},
 I'ᴍ Pirate Search Bot Yᴏᴜ Cᴀɴ Cᴀʟʟ Mᴇ ᴀꜱ Aᴜᴛᴏ Fɪʟᴛᴇʀ Bᴏᴛ ᴠ3 
 
-Did You Need A Private Bot Clone Then Type - /clone
-
- Sᴜᴘᴘᴏʀᴛ : @FilmPiratesOfficial"""
+ Sᴜᴘᴘᴏʀᴛ : @FilmPirateOfficial</b>"""
     STATUS_TXT = """★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: <code>{}</code>
 › T-USERS: <code>{}</code>
 › T-CHATS: <code>{}</code>

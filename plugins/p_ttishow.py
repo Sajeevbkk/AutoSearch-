@@ -111,6 +111,5 @@ async def get_clone(bot, message):
 @Client.on_message(filters.command('hello') & filters.incoming)
 async def get_clone(bot, message):
     await message.reply_text("<b>Hi Guys, If You Need Movies Then Ask It Here => See @FilmPiratesGroup OR Click Ask Movies😇</b>")
-buttons = [[
-            InlineKeyboardButton('📢 Latest Movies', url='https://t.me/FilmPirateOfficial')
-        ]]
+
+   

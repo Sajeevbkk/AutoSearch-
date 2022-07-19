@@ -8,7 +8,7 @@ from utils import get_size, temp, get_settings
 from Script import script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
+"""-----------------------------------------https://t.me/FPGetFiles/423 --------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -37,7 +37,7 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('📢 Latest Movies', url='https://t.me/FilmPiratesOfficial')
+            InlineKeyboardButton('📢 Latest Movies', url='https://t.me/FilmPirateOfficial')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -70,7 +70,7 @@ async def get_ststs(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/GetTGLink/4184
+    # https://t.me/FPGetFiles/424
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
@@ -108,3 +108,9 @@ async def list_chats(bot, message):
 async def get_clone(bot, message):
     await message.reply_text("Hi, Guys I'am a Developer, If You Need A Bot Like This => See @AdvBotUpdates We Will Also Develope Bot Like Mallu_Movies/ProSearch bot and We Will Also Develope Bot As Your Wish😇")
 
+@Client.on_message(filters.command('hello') & filters.incoming)
+async def get_clone(bot, message):
+    await message.reply_text("Hi Guys, If You Need Movies Then Ask It Here => See @FilmPiratesGroup OR Click Ask Movies😇")
+buttons = [[
+            InlineKeyboardButton('📢 Latest Movies', url='https://t.me/FilmPirateOfficial')
+        ]]

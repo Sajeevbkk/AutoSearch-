@@ -103,11 +103,7 @@ async def list_chats(bot, message):
             outfile.write(out)
         await message.reply_document('chats.txt', caption="List Of Chats")
 
-
-@Client.on_message(filters.command('clone') & filters.incoming)
-async def get_clone(bot, message):
-    await message.reply_text("<b>Hi, Guys I'am a Developer, If You Need A Bot Like This => See @AdvBotUpdates We Will Also Develope Bot Like Mallu_Movies/ProSearch bot and We Will Also Develope Bot As Your Wish😇</b>")
-
+        
 @Client.on_message(filters.command('hello') & filters.incoming)
 async def get_clone(bot, message):
     await message.reply_text("<b>Hi Guys, If You Need Movies Then Ask It Here => See @FilmPiratesGroup OR Click Ask Movies😇</b>")

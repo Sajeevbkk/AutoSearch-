@@ -68,25 +68,25 @@ async def delete_filter(message, text, group_id):
     if query == 1:
         mycol.delete_one(myquery)
         await message.reply_text(
-            f"'`{text}`'  deleted. I'll not respond to that filter anymore.",
+            f"'`{text}`'  ഞാന്‍ ആ Filter delete ചെയ്തു.",
             quote=True,
             parse_mode="md"
         )
     else:
-        await message.reply_text("Couldn't find that filter!", quote=True)
+        await message.reply_text("അങനൊരു filter ഇല്ലല്ലൊ മോനുസ്സേ!", quote=True)
 
 
 async def del_all(message, group_id, title):
     if str(group_id) not in mydb.list_collection_names():
-        await message.edit_text(f"Nothing to remove in {title}!")
+        await message.edit_text(f"അതിന്‍ {title} ഒരു filter ഉം ഇല്ല‍!")
         return
 
     mycol = mydb[str(group_id)]
     try:
         mycol.drop()
-        await message.edit_text(f"All filters from {title} has been removed")
+        await message.edit_text(f"എല്ലാ filter ഉം delete ചെയ്ത്")
     except:
-        await message.edit_text("Couldn't remove all filters from group!")
+        await message.edit_text("Group ലെ filter delete ചെയ്യാന്‍ പറ്റില്ല!")
         return
 
 

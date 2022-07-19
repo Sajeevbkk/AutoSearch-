@@ -41,10 +41,10 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[      
-            InlineKeyboardButton('⭕ MY JOIN GROUP ⭕', url='http://t.me/FilmPiratesGroup')
+            InlineKeyboardButton('⭕ JOIN YOUR GROUP ⭕', url='http://t.me/FilmPiratesGroup')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_chat_action("sending")
+        await message.reply_chat_action("typing")
         m=await message.reply_sticker("CAACAgIAAxkBAAL2zmIgeiB-uDSaV1eOn0xLGe5iuV9iAAKaEAACxpXRS5vXvdQx7K4cIwQ")
         await message.reply_chat_action("typing")
         await message.reply_text(
@@ -80,7 +80,7 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[      
-            InlineKeyboardButton('⭕ MY JOIN GROUP ⭕', url='http://t.me/FilmPiratesGroup')
+            InlineKeyboardButton('⭕ JOIN YOUR GROUP ⭕', url='http://t.me/FilmPiratesGroup')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_chat_action("typing")
@@ -318,9 +318,9 @@ async def delete(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                await msg.edit('File is successfully deleted from database')
+                await msg.edit('ആ File എടുത്ത് കളഞു ഞാന്‍')
             else:
-                await msg.edit('File not found in database')
+                await msg.edit('ആ File database ല്‍ ഇല്ല!‍')
 
 
 @Client.on_message(filters.command('deleteall') & filters.user(ADMINS))

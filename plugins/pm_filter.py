@@ -482,8 +482,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 btn = [[
                     InlineKeyboardButton(f'ɪɴꜰᴏ', callback_data='tips')
                     ],[
-                    InlineKeyboardButton("⚠️ DOWNLOAD ⚠️", url ='https://t.me/+tj66kGdM1vs1ZWM1')
-                    ],[
                     InlineKeyboardButton("📥Download📥", url =f"{send_file.link}")
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)

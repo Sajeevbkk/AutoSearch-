@@ -193,7 +193,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("⚠️ Bro, search your on file, don't click others request file🥵  ⚠️Bro മറ്റുള്ളവർ റിക്വസ്റ്റ് ചെയ്ത മൂവിയിൽ കുത്തി നോക്കാതെ Bro-ക്ക് വേണ്ടത് ബ്രോ റിക്വസ്റ്റ് ചെയ്യുക🤒.", show_alert=True)
+        return await query.answer("⚠️ Bro, search your own file, don't click others request file🥵  ⚠️Bro മറ്റുള്ളവർ റിക്വസ്റ്റ് ചെയ്ത മൂവിയിൽ കുത്തി നോക്കാതെ Bro-ക്ക് വേണ്ടത് ബ്രോ റിക്വസ്റ്റ് ചെയ്യുക🤒.", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -439,7 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ident, file_id, req = query.data.split("#")
 
         if int(req) not in [query.from_user.id, 0]:
-            return await query.answer("⚠️ Bro, search your on file, don't click others request file🥵.  ⚠️Bro മറ്റുള്ളവർ റിക്വസ്റ്റ് ചെയ്ത മൂവിയിൽ കുത്തി നോക്കാതെ Bro-ക്ക് വേണ്ടത് ബ്രോ റിക്വസ്റ്റ് ചെയ്യുക🤒.", show_alert=True)
+            return await query.answer("⚠️ Bro, search your own file, don't click others request file🥵.  ⚠️Bro മറ്റുള്ളവർ റിക്വസ്റ്റ് ചെയ്ത മൂവിയിൽ കുത്തി നോക്കാതെ Bro-ക്ക് വേണ്ടത് ബ്രോ റിക്വസ്റ്റ് ചെയ്യുക🤒.", show_alert=True)
 
         files_ = await get_file_details(file_id)
         if not files_:
@@ -480,7 +480,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     protect_content=True if ident == "filep" else False 
                     )
                 btn = [[
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', callback_data='tips')
+                    InlineKeyboardButton(f"HELP 🆘",url='https://t.me/FPGetFiles/472')
+                    ],[
+                    InlineKeyboardButton("⚠️ Movie കിട്ടിയില്ലെ❓ ഇവിടെ  Click ⚠️", url ='https://t.me/+tj66kGdM1vs1ZWM1')
                     ],[
                     InlineKeyboardButton("📥Download📥", url =f"{send_file.link}")
                 ]]
@@ -828,7 +830,7 @@ async def advantage_spell_chok(msg):
     if not movielist:
         button = InlineKeyboardMarkup(
         [[
-           InlineKeyboardButton('➕ Get Latest Movies ➕', url=f'http://t.me/FilmPiratesOfficial')
+           InlineKeyboardButton('➕ Get Latest Movies ➕', url=f'http://t.me/FilmPirateOfficial')
         ],
         [
            InlineKeyboardButton("Bot Updates", url=f"Do you want to open https://t.me/AdvBotUpdates"),

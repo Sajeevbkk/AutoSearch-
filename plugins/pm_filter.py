@@ -224,12 +224,12 @@ async def advantage_spoll_choker(bot, query):
             text="⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫\nSEARCHING... 100/100%\n⚫⚫⚫⚫⚫⚫⚫⚫⚫⚫"
         )
         await query.message.reply_text(
-            text=f"🧸𝐇𝐞𝐲 👋 {query.from_user.mention} 🥰, This Movie is not released or not added in my database\nThis DVD Will be add in 24h",
+            text=f"<b>🧸𝐇𝐞𝐲 👋 {query.from_user.mention} 🥰, This Movie is not released or not added in my database\nThis DVD Will be add in 24h</b>",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="➕ Get Latest Movies ➕", url=f"http://t.me/FilmPiratesOfficial"
+                        text="➕ Get Latest Movies ➕", url=f"http://t.me/FilmPirateOfficial"
                     )
                 ],
                 [
@@ -486,7 +486,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]]
                 reply_markup = InlineKeyboardMarkup(btn)
                 bb = await query.message.reply_text(
-                    text = f"Hey 👋{query.from_user.mention}\n\n<b>📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇</b>\n\n<code>THis file will be deleted in 5 minutes.!</code>\n<b>🎥 Film Nᴀᴍᴇ: {title}</b>\n\n<b>⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ: {size}</b>",
+                    text = f"<b>Hey 👋{query.from_user.mention}\n\n📫 Yᴏʀ Fɪʟᴇ ɪꜱ Rᴇᴀᴅʏ 👇\n\n<code>THis file will be deleted in 5 minutes.!</code>\n🎥 Film Nᴀᴍᴇ: {title}\n\n<b>⚙️ Mᴏᴠɪᴇ Sɪᴢᴇ: {size}</b>",
                     reply_markup = reply_markup
                 )
                 await asyncio.sleep(300)
